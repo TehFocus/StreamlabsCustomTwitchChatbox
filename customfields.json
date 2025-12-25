@@ -1,0 +1,193 @@
+{
+  "bgColor": {
+    "label": "Background Color",
+    "type": "colorpicker",
+    "value": "#120F0F"
+  },
+  "bgOpacity": {
+    "label": "Background Opacity",
+    "max": 100,
+    "min": 0,
+    "name": "",
+    "steps": 1,
+    "type": "slider",
+    "value": 10
+  },
+  "colorOne": {
+    "label": "Border Color One (left side)",
+    "type": "colorpicker",
+    "value": "#3E00FF"
+  },
+  "colorTwo": {
+    "label": "Border Color Two (middle side)",
+    "type": "colorpicker",
+    "value": "#E11DFF"
+  },
+  "colorThree": {
+    "label": "Border Color Two (right side)",
+    "type": "colorpicker",
+    "value": "#00FFEF"
+  },
+  "displayType": {
+    "label": "Display Type",
+    "options": {
+      "block": "Full Width",
+      "inline-block": "Partial Width"
+    },
+    "type": "dropdown",
+    "value": "block"
+  },
+  "fontFamily": {
+    "label": "Font Family",
+    "type": "fontpicker",
+    "value": "Ubuntu"
+  },
+  "nameColor": {
+    "label": "Names Color",
+    "type": "colorpicker",
+    "value": "#D94B18"
+  },
+  "sourceWidth": {
+    "label": "Source Width (px)",
+    "type": "slider",
+    "min": 320,
+    "max": 4000,
+    "steps": 10,
+    "value": 2200
+  },
+  "sourceHeight": {
+    "label": "Source Height (px)",
+    "type": "slider",
+    "min": 240,
+    "max": 4000,
+    "steps": 10,
+    "value": 1400
+  },
+  "textAlign": {
+    "label": "Text Align",
+    "options": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "type": "dropdown",
+    "value": "left"
+  },
+  "fromWeight": {
+    "label": "Name Font Weight",
+    "type": "slider",
+    "min": 400,
+    "max": 900,
+    "steps": 50,
+    "value": 900
+  },
+  "messageWeight": {
+    "label": "Message Font Weight",
+    "type": "slider",
+    "min": 300,
+    "max": 900,
+    "steps": 50,
+    "value": 900
+  },
+  "textDensity": {
+    "label": "Text Density (line height)",
+    "type": "slider",
+    "min": 0.9,
+    "max": 1.6,
+    "steps": 0.05,
+    "value": 0.95
+  },
+  "messageColorOne": {
+    "label": "Message Gradient Color One",
+    "type": "colorpicker",
+    "value": "#FFFFFF"
+  },
+  "messageColorTwo": {
+    "label": "Message Gradient Color Two",
+    "type": "colorpicker",
+    "value": "#BFFFFF"
+  },
+  "messageColorThree": {
+    "label": "Message Gradient Color Three",
+    "type": "colorpicker",
+    "value": "#E9D5FF"
+  },
+  "messageSpacing": {
+    "label": "Space Between Messages (px)",
+    "type": "slider",
+    "min": 0,
+    "max": 60,
+    "steps": 1,
+    "value": 6
+  },
+  "latestScale": {
+    "label": "Newest Message Scale",
+    "type": "slider",
+    "min": 1,
+    "max": 1.6,
+    "steps": 0.05,
+    "value": 1.12
+  },
+  "separatorHeight": {
+    "label": "Separator Height (px)",
+    "type": "slider",
+    "min": 1,
+    "max": 16,
+    "steps": 1,
+    "value": 4
+  },
+  "separatorOpacity": {
+    "label": "Separator Opacity (%)",
+    "type": "slider",
+    "min": 10,
+    "max": 100,
+    "steps": 1,
+    "value": 80
+  },
+  "separatorBlur": {
+    "label": "Separator Glow Blur (px)",
+    "type": "slider",
+    "min": 0,
+    "max": 20,
+    "steps": 1,
+    "value": 8
+  },
+  "separatorColorOne": {
+    "label": "Separator Color One",
+    "type": "colorpicker",
+    "value": "#00E7FF"
+  },
+  "separatorColorTwo": {
+    "label": "Separator Color Two",
+    "type": "colorpicker",
+    "value": "#5C7BFF"
+  },
+  "separatorColorThree": {
+    "label": "Separator Color Three",
+    "type": "colorpicker",
+    "value": "#B65CFF"
+  },
+  "barSpeed": {
+    "label": "Animation Speed (seconds)",
+    "type": "slider",
+    "min": 0.2,
+    "max": 1.6,
+    "steps": 0.05,
+    "value": 1.6
+  },
+  "barFlowSpeed": {
+    "label": "Bar Gradient Flow Speed (seconds)",
+    "type": "slider",
+    "min": 2,
+    "max": 12,
+    "steps": 0.2,
+    "value": 12
+  },
+  "badgeScale": {
+    "label": "Badge Size Scale",
+    "type": "slider",
+    "min": 0.6,
+    "max": 2,
+    "steps": 0.05,
+    "value": 1.2
+  }
+}

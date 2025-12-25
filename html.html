@@ -1,0 +1,40 @@
+/*
+ TehF0cus Streamlabs Custom Chatbox - html file
+ Version: 1.0
+ Release Date: 25. Dec 2025
+
+ Please consider supporting the author:
+ Donate: https://ko-fi.com/tehf0cus
+
+ Public repository: https://github.com/TehFocus/StreamlabsCustomTwitchChatbox
+
+ License: Released under the MIT License. See the LICENSE file for details.
+*/
+
+<div id="log" class="sl__chat__layout" aria-live="polite" aria-atomic="false"></div>
+
+<!-- Chat message template -->
+<script type="text/template" id="chatlist_item">
+<div class="chatMsg" data-from="{from}" data-id="{messageId}">
+  <div class="innerChat">
+    <div class="backgroundHolder">
+      <div class="chatBg"></div>
+      <div class="borderHolder">
+        <div class="chatBorder"></div>
+      </div>
+    </div>
+    <div class="scaleHolder">
+      <span class="meta">
+        <span class="inner">
+          <span class="badges"></span>
+          <span class="name">{from}</span>
+          <span class="separator">:</span>
+        </span>
+      </span>
+      <span class="message rightMsg">
+        <span class="inner">{message}</span>
+      </span>
+    </div>
+  </div>
+</div>
+</script>

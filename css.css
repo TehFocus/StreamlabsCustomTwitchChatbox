@@ -1,0 +1,319 @@
+/*
+ TehF0cus Streamlabs Custom Chatbox - Stylesheet
+ Version: 1.0
+ Release Date: 25. Dec 2025
+
+ Please consider supporting the author:
+ Donate: https://ko-fi.com/tehf0cus
+
+ Public repository: https://github.com/TehFocus/StreamlabsCustomTwitchChatbox
+
+ License: Released under the MIT License. See the LICENSE file for details.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,900');
+
+/* Base Styles */
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  padding: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: {font_size};
+  line-height: var(--textDensity, 1.2);
+  color: {text_color};
+  text-align: {textAlign};
+  background: transparent;
+}
+
+/* CSS Variables */
+:root {
+  --fromWeight: {fromWeight};
+  --messageWeight: {messageWeight};
+  --borderSize: 4px;
+  --borderRadius: 16px;
+  --bgColor: {bgColor};
+  --bgOpacity: calc({bgOpacity} * .01);
+  --sourceWidth: {sourceWidth}px;
+  --sourceHeight: {sourceHeight}px;
+  --textDensity: {textDensity};
+  --messageSpacing: {messageSpacing}px;
+  --separatorHeight: {separatorHeight}px;
+  --separatorOpacity: calc({separatorOpacity} * .01);
+  --separatorBlur: {separatorBlur}px;
+  --separatorColorOne: {separatorColorOne};
+  --separatorColorTwo: {separatorColorTwo};
+  --separatorColorThree: {separatorColorThree};
+  --msgColorOne: {messageColorOne};
+  --msgColorTwo: {messageColorTwo};
+  --msgColorThree: {messageColorThree};
+  --latestScaleRaw: {latestScale};
+  --latestScale: clamp(1, var(--latestScaleRaw), 1.35);
+  --badgeScale: {badgeScale};
+  --barSpeed: {barSpeed}s;
+  --barFlowSpeed: {barFlowSpeed}s;
+}
+
+/* Chat Container */
+#log {
+  display: flex;
+  flex-direction: column;
+  gap: var(--messageSpacing);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 12px 12px 12px;
+  width: min(100%, var(--sourceWidth));
+  max-width: min(100%, var(--sourceWidth));
+  height: min(100%, var(--sourceHeight));
+  max-height: min(100%, var(--sourceHeight));
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
+#log > div.deleted {
+  visibility: hidden;
+}
+
+/* Message Wrapper */
+.chatMsg {
+  position: relative;
+  animation: floatIn 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+  transform-origin: center;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.16));
+  max-width: 100%;
+}
+
+/* Inner Message Container */
+.innerChat {
+  margin: 0;
+  display: {displayType};
+  padding: 18px 44px 22px 22px;
+  overflow: hidden;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  position: relative;
+  border-radius: var(--borderRadius);
+  isolation: isolate;
+  backdrop-filter: blur(4px);
+  transition: transform 0.28s ease, filter 0.28s ease;
+  max-width: 100%;
+}
+
+/* Latest Message Scale Effect */
+.chatMsg.is-latest .innerChat {
+  transform: scale(var(--latestScale));
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,0.22));
+}
+
+/* Message Background */
+.chatBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bgColor);
+  opacity: var(--bgOpacity);
+  z-index: 1;
+  animation: sweepBg 0.7s ease forwards;
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+/* Background Glow Effect */
+.backgroundHolder:after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background: radial-gradient(circle at 15% 20%, rgba(0, 255, 239, 0.1), transparent 40%),
+              radial-gradient(circle at 80% 10%, rgba(94, 0, 255, 0.12), transparent 45%),
+              radial-gradient(circle at 50% 90%, rgba(214, 118, 255, 0.12), transparent 50%);
+  filter: blur(14px);
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Animated Border Bar */
+.chatBorder {
+  width: 250%;
+  height: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(90deg, {colorOne} 0%, {colorTwo} 50%, {colorThree} 100%);
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 18%, black 82%, transparent 100%);
+  background-size: 300% 100%;
+  animation: slideBorder var(--barSpeed) ease forwards, gradientFlow var(--barFlowSpeed) linear infinite;
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+.borderHolder {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: var(--borderRadius);
+}
+
+/* Content Wrapper */
+.scaleHolder {
+  position: relative;
+  display: inline-block;
+  z-index: 3;
+  opacity: 0;
+  animation: revealText 0.6s ease 0.3s forwards;
+  max-width: 100%;
+}
+
+/* Username Styling */
+#log .meta {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 3;
+  font-weight: var(--fromWeight);
+  color: {nameColor};
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  line-height: var(--textDensity);
+}
+
+/* Message Text */
+#log .message {
+  display: block;
+  word-wrap: break-word;
+  position: relative;
+  z-index: 3;
+  font-weight: var(--messageWeight);
+  line-height: var(--textDensity);
+}
+
+/* Message Gradient Text Effect */
+#log .message .inner {
+  display: inline;
+  background: linear-gradient(90deg, var(--msgColorOne) 0%, var(--msgColorTwo) 50%, var(--msgColorThree) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  margin-right: 0.25em;
+  position: relative;
+  height: calc(1em * var(--badgeScale));
+  vertical-align: middle;
+  top: -0.1em;
+  width: auto;
+}
+
+.name {
+  margin-left: 0.25em;
+}
+
+.message.rightMsg .inner {
+  display: inline;
+}
+
+/* Message Separator Bar */
+.msgSeparator {
+  position: relative;
+  height: var(--separatorHeight);
+  background: linear-gradient(90deg, var(--separatorColorOne) 0%, var(--separatorColorTwo) 50%, var(--separatorColorThree) 100%);
+  opacity: var(--separatorOpacity);
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  filter: drop-shadow(0 0 var(--separatorBlur) rgba(0,0,0,0.45));
+  background-size: 300% 100%;
+  animation: drawBar var(--barSpeed) ease forwards, gradientFlow var(--barFlowSpeed) linear infinite;
+}
+
+.msgSeparator:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25), transparent 55%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: shimmer var(--barSpeed) ease forwards;
+}
+
+.chatMsg + .msgSeparator {
+  margin-top: calc(var(--messageSpacing) * 0.35);
+}
+
+.msgSeparator + .chatMsg {
+  margin-top: calc(var(--messageSpacing) * 0.15);
+}
+
+/* Emotes */
+#log .emote {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 0.4em 0.2em;
+  position: relative;
+}
+
+#log .emote img {
+  display: inline-block;
+  height: 1em;
+  opacity: 0;
+}
+
+/* Message Fade Out */
+#log > div {
+  animation: fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+
+/* Animations */
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateY(12px) scale(0.98); }
+  60% { opacity: 1; transform: translateY(-4px) scale(1); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sweepBg {
+  0% { clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); }
+  100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+}
+
+@keyframes slideBorder {
+  0% { clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); }
+  100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+}
+
+@keyframes revealText {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes drawBar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes shimmer {
+  from { opacity: 0; }
+  40% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: -300% 50%; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
