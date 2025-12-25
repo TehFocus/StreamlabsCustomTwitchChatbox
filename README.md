@@ -12,9 +12,7 @@ A modern Twitch chat overlay for Streamlabs with animated gradients and effects.
 
 ## Demo
 <p align="left">
-   <a href="https://ko-fi.com/tehf0cus" target="_blank" rel="noopener noreferrer">
       <img src="https://cdn.discordapp.com/attachments/567623679765250058/1453813869335019601/image.png?ex=694ed12d&is=694d7fad&hm=afeecc0ca0c235e9861e552855558f9c0347878b2068b1e620b3137530d68f57&" alt="Demopicture" width="90%">
-   </a>
 </p>
 
 <p>
@@ -61,9 +59,7 @@ For Streamlabs Desktop Users (Same procedure, just adjustable in the software)
 All settings are adjustable via the Streamlabs custom fields interface:
 
 <p align="left">
-   <a href="https://ko-fi.com/tehf0cus" target="_blank" rel="noopener noreferrer">
       <img src="https://cdn.discordapp.com/attachments/567623679765250058/1453814404599779380/image.png?ex=694ed1ac&is=694d802c&hm=b742a29c3b573c871ad2ec5b62761f2b1051e972fc43d5b4fa193d6e9005c5e7&" alt="Demopicture" width="90%">
-   </a>
 </p>
 ## How It Works
 
