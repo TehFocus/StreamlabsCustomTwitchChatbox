@@ -17,10 +17,6 @@ A modern Twitch chat overlay for Streamlabs with animated gradients and effects.
    </a>
 </p>
 
-<div align="center">
-<!-- Embedded YouTube video (uses the official embed URL). Some renderers block iframes; use the fallback link or click the thumbnail. -->
-<iframe width="720" height="405" src="https://www.youtube.com/embed/3tgMXcK9rRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 <p>
 Watch on YouTube: <a href="https://youtu.be/3tgMXcK9rRs">https://youtu.be/3tgMXcK9rRs</a>
 </p>
