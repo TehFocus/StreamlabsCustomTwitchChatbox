@@ -12,7 +12,12 @@ A modern Twitch chat overlay for Streamlabs with animated gradients and effects.
 
 ## Demo
 <p align="left">
-      <img src="https://cdn.discordapp.com/attachments/567623679765250058/1453813869335019601/image.png?ex=694ed12d&is=694d7fad&hm=afeecc0ca0c235e9861e552855558f9c0347878b2068b1e620b3137530d68f57&" alt="Demopicture" width="90%">
+      <span>Default Color Scheme (customfields.json):</span>
+      <img src="https://cdn.discordapp.com/attachments/567623679765250058/1454039965070786571/image.png?ex=694fa3be&is=694e523e&hm=c07fa140fd9a9bcf7980f5411c62ec5da8ed205902f59c84ad9c3fc1934fe521&" alt="Demopicture2" width="90%">
+      <span>Orange/Red Color Scheme (customfieldsOrangeTheme.json):</span>
+      <img src="https://cdn.discordapp.com/attachments/567623679765250058/1454042506512564277/image.png?ex=694fa61c&is=694e549c&hm=82fa2e988607e59a77b26dedb4628236fed823c049ed1c1db37ab869ff68c186&" alt="Demopicture2" width="90%">
+      <span>Example from my own stream:</span>
+      <img src="https://cdn.discordapp.com/attachments/567623679765250058/1453813869335019601/image.png?ex=694ed12d&is=694d7fad&hm=afeecc0ca0c235e9861e552855558f9c0347878b2068b1e620b3137530d68f57&" alt="Demopicture1" width="90%">
 </p>
 
 <p>

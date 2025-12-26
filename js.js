@@ -1,7 +1,7 @@
 /*
  TehF0cus Streamlabs Custom Chatbox - JavaScript file
- Version: 1.0
- Release Date: 25. Dec 2025
+ Version: 1.1
+ Release Date: 26. Dec 2025
 
  Please consider supporting the author:
  Donate: https://ko-fi.com/tehf0cus
@@ -74,7 +74,7 @@ function decorateMessage(node) {
   ) {
     var separator = document.createElement("div");
     separator.className = "msgSeparator";
-    separator.setAttribute("aria-hidden", "true");
+    // separator.setAttribute("aria-hidden", "true");
     node.parentElement.insertBefore(separator, node);
   }
 
