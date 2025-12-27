@@ -1,0 +1,146 @@
+{
+  "bgColor": {
+    "label": "Background Color",
+    "type": "colorpicker",
+    "value": "#0DAFDD"
+  },
+  "bgOpacity": {
+    "label": "Background Opacity",
+    "max": 100,
+    "min": 0,
+    "name": "",
+    "steps": 1,
+    "type": "slider",
+    "value": 15
+  },
+  "colorOne": {
+    "label": "Border Color One (left side)",
+    "type": "colorpicker",
+    "value": "#00BCFF"
+  },
+  "colorTwo": {
+    "label": "Border Color Two (middle side)",
+    "type": "colorpicker",
+    "value": "#B124EA"
+  },
+  "colorThree": {
+    "label": "Border Color Two (right side)",
+    "type": "colorpicker",
+    "value": "#68A2E3"
+  },
+  "displayType": {
+    "label": "Display Type",
+    "options": {
+      "block": "Full Width",
+      "inline-block": "Partial Width"
+    },
+    "type": "dropdown",
+    "value": "block"
+  },
+  "fontFamily": {
+    "label": "Font Family",
+    "type": "fontpicker",
+    "value": "Ubuntu Condensed"
+  },
+  "nameColor": {
+    "label": "Names Color",
+    "type": "colorpicker",
+    "value": "#EB650D"
+  },
+  "sourceWidth": {
+    "label": "Source Width (px)",
+    "type": "slider",
+    "min": 320,
+    "max": 4000,
+    "steps": 10,
+    "value": 2000
+  },
+  "sourceHeight": {
+    "label": "Source Height (px)",
+    "type": "slider",
+    "min": 240,
+    "max": 4000,
+    "steps": 10,
+    "value": 1400
+  },
+  "textAlign": {
+    "label": "Text Align",
+    "options": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "type": "dropdown",
+    "value": "left"
+  },
+  "fromWeight": {
+    "label": "Name Font Weight",
+    "type": "slider",
+    "min": 400,
+    "max": 900,
+    "steps": 50,
+    "value": 700
+  },
+  "messageWeight": {
+    "label": "Message Font Weight",
+    "type": "slider",
+    "min": 300,
+    "max": 900,
+    "steps": 50,
+    "value": 900
+  },
+  "textDensity": {
+    "label": "Text Density (line height)",
+    "type": "slider",
+    "min": 0.9,
+    "max": 1.6,
+    "steps": 0.05,
+    "value": 0.95
+  },
+  "messageColorOne": {
+    "label": "Message Gradient Color One",
+    "type": "colorpicker",
+    "value": "#E5F0EF"
+  },
+  "messageColorTwo": {
+    "label": "Message Gradient Color Two",
+    "type": "colorpicker",
+    "value": "#E5F0EF"
+  },
+  "messageColorThree": {
+    "label": "Message Gradient Color Three",
+    "type": "colorpicker",
+    "value": "#E5F0EF"
+  },
+  "messageSpacing": {
+    "label": "Space Between Messages (px)",
+    "type": "slider",
+    "min": 0,
+    "max": 60,
+    "steps": 1,
+    "value": 0
+  },
+  "barSpeed": {
+    "label": "Animation Speed (seconds)",
+    "type": "slider",
+    "min": 0.2,
+    "max": 10,
+    "steps": 0.05,
+    "value": 0.2
+  },
+  "barFlowSpeed": {
+    "label": "Bar Gradient Flow Speed (seconds)",
+    "type": "slider",
+    "min": 2,
+    "max": 120,
+    "steps": 0.2,
+    "value": 13
+  },
+  "badgeScale": {
+    "label": "Badge Size Scale",
+    "type": "slider",
+    "min": 0.6,
+    "max": 2,
+    "steps": 0.05,
+    "value": 1.3
+  }
+}

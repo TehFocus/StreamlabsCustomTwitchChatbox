@@ -4,6 +4,13 @@ Changelog
 This file documents notable changes for the project. Entries should be in descending order (newest first).
 
 -----------------------------------------------------------------
+Version: 1.2
+Date: 27th Dec. 2025
+Summary: New Theme for you to use
+
+-Blue/Purple Theme added (customfieldsPurpleTheme.json)
+
+-----------------------------------------------------------------
 Version: 1.1
 Date: 26th Dec. 2025
 Summary: Update to default Style and a few minor CSS changes
